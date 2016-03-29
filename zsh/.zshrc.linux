@@ -1,0 +1,6 @@
+## systemctl is a nightmare to type *and* complete
+if [[ -x /usr/bin/systemctl ]]; then
+    # $SUDO will be set by grml zshrc
+    alias sc="$SUDO systemctl"
+    alias jc="$SUDO journalctl"
+fi
