@@ -23,6 +23,14 @@ To deactivate this group, use the `-D` flag:
 
     stow -D vim
 
+To activate all groups use this handy `zsh` shortcut:
+
+    stow *(/)
+
+To get an overview of the symlinks that get created, use:
+
+    find ~ -maxdepth 1 -type l -ls
+
 
 ## Sensitive files
 
