@@ -1,8 +1,3 @@
-## Configure additional zsh completions (e.g., from Homebrew)
-for dir in /usr/local/share/zsh{/site-functions,-completions}; do
-    [[ -d $dir ]] && fpath=($dir $fpath)
-done
-
 ## Fix for displaying multibyte chars correctly
 setopt combiningchars
 

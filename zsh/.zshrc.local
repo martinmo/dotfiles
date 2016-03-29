@@ -79,6 +79,3 @@ xsource ~/.zshrc.$(uname -s | tr '[:upper:]' '[:lower:]')
 
 ## Load host-specific configs (git-ignored)
 xsource ~/.zshrc.host
-
-## Refresh zsh completion
-compinit
