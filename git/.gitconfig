@@ -1,0 +1,23 @@
+[user]
+	name = Martin Morgenstern
+	email = mail@mmorgenstern.net
+[alias]
+	st = status -sb
+	ci = commit
+	co = checkout
+	br = branch -v
+	bra = branch -av
+	staged = diff --cached
+	ol = log --oneline --decorate
+	show-merge = !sh -c \"git diff $1^..$1\"
+[color]
+	ui = true
+[push]
+	default = simple
+[core]
+	precomposeunicode = true
+	excludesfile = ~/.gitignore_global
+[credential]
+	helper = osxkeychain
+[merge]
+	tool = opendiff

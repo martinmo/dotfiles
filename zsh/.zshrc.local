@@ -1,0 +1,84 @@
+## use the vi navigation keys (hjkl) besides cursor keys in menu completion
+bindkey -M menuselect 'h' vi-backward-char        # left
+bindkey -M menuselect 'k' vi-up-line-or-history   # up
+bindkey -M menuselect 'l' vi-forward-char         # right
+bindkey -M menuselect 'j' vi-down-line-or-history # bottom
+
+## virtualenv prompt info
+function venv_prompt_info() {
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        if [[ -f "$VIRTUAL_ENV/__name__" ]]; then
+            local name=$(cat $VIRTUAL_ENV/__name__)
+        else
+            local name=$(basename $VIRTUAL_ENV)
+        fi
+        echo "%F{magenta}[%F{blue}$name%F{magenta}]%f "
+    fi
+}
+
+## Prompt customization
+zstyle ':prompt:grml:left:setup' items rc path vcs venv percent
+zstyle ':prompt:grml:left:items:venv' token '$(venv_prompt_info)'
+zstyle ':prompt:grml:left:items:path' token '%1~ '
+
+## vcs_info stuff: enable only git + use custom color
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats '%F{magenta}(%F{green}%b%F{magenta})%f '
+
+## For venv_prompt_info() to be evaluated
+setopt promptsubst
+
+## Unalias some grml stuff
+unalias l lh ls
+
+## Setup ls with color for Linux or OSX
+if ls --help 2> /dev/null | grep -q -- --color; then
+    alias ls='ls --color=auto -b -CF'
+else
+    alias ls='ls -b -CF'
+fi
+
+alias l.='ls -d .*'
+alias ll='ls -l'
+alias la='ls -la'
+
+alias grep='grep --color=auto'
+alias tree='tree -CF'
+
+alias -g '...'='../..'
+alias -g '....'='../../..'
+alias -g L='|less'
+
+## Shortcuts to start development servers
+alias http.server='python3 -m http.server 8080 &>/dev/null </dev/null &'
+alias php.server='php -S0.0.0.0:8080 index.php &>/dev/null </dev/null &'
+
+## Change to the root of a git repo (groot is unusable because
+## there are so many groo* binaries on my PATH)
+alias Groot='cd "$(git rev-parse --show-toplevel)"'
+
+export MANWIDTH=80
+export LESS="-X -F -R -x4"
+export EDITOR="vim"
+
+## Configure interactive Python if available
+[[ -r ~/.pythonstartup ]] && export PYTHONSTARTUP=~/.pythonstartup
+
+## Add local binaries to PATH
+if [[ -d ~/bin ]]; then
+    path=(~/bin $path)
+fi
+
+## Generates random alphanumeric passwords with given length (default: 14)
+genpass() {
+    LC_ALL=C tr -cd '[:alnum:]' </dev/urandom | head -c "${1:-14}"; echo
+}
+
+## Load platform-specific configs
+xsource ~/.zshrc.$(uname -s | tr '[:upper:]' '[:lower:]')
+
+## Load host-specific configs (git-ignored)
+xsource ~/.zshrc.host
+
+## Refresh zsh completion
+compinit

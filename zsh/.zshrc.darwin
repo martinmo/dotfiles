@@ -1,0 +1,62 @@
+## Configure additional zsh completions (e.g., from Homebrew)
+for dir in /usr/local/share/zsh{/site-functions,-completions}; do
+    [[ -d $dir ]] && fpath=($dir $fpath)
+done
+
+## Fix for displaying multibyte chars correctly
+setopt combiningchars
+
+## Disable core dumps
+ulimit -c 0
+
+## OS X specific envvars
+export EDITOR="mvim -f --nomru"
+export LANG="en_US.UTF-8"
+export LC_ALL=$LANG
+
+## JVM-related stuff
+export JAVA_HOME=$(/usr/libexec/java_home)
+path=($JAVA_HOME/bin $path)
+
+## Move /usr/local/bin to the beginning of the path (Homebrew)
+path=(/usr/local/bin /usr/local/sbin $path)
+
+## Android platform tools (adb and fastboot)
+if [[ -d ~/android-sdk/platform-tools ]]; then
+    path=(~/android-sdk/platform-tools $path)
+fi
+
+## Handy aliases
+alias o="open"
+alias htop="sudo htop"
+
+## Homebrewed zsh setup
+unalias run-help &>/dev/null
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
+
+## Use Homebrew'd curl
+[[ -x '/usr/local/opt/curl/bin/curl' ]] && alias curl='/usr/local/opt/curl/bin/curl'
+
+## Initialize docker & docker-machine
+[[ -r ~/.init_docker.zsh ]] && alias init-docker='source ~/.init_docker.zsh'
+
+## Unload VirtualBox kexts, so we can start VMware Fusion safely
+vbox-unload() {
+    for kext in org.virtualbox.kext.VBoxUSB org.virtualbox.kext.VBoxNetFlt \
+                org.virtualbox.kext.VBoxNetAdp org.virtualbox.kext.VBoxDrv; do
+        echo "unloading $kext"
+        sudo kextunload -m $kext
+        if [[ $? != 0 ]]; then
+            echo "error while unloading $kext"
+        fi
+    done
+}
+
+## Starts gitk GUI completely detached from the shell
+gitk() {
+    command gitk "$@" &>/dev/null </dev/null &!
+}
+
+## Show man page in Preview
+pman() { man -t $@ | open -f -a Preview }

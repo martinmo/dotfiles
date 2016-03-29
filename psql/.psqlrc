@@ -1,0 +1,4 @@
+\x auto
+\timing
+\set COMP_KEYWORD_CASE upper
+\set HISTSIZE 2000
