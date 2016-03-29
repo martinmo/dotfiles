@@ -31,13 +31,6 @@ setopt promptsubst
 ## Unalias some grml stuff
 unalias l lh ls
 
-## Setup ls with color for Linux or OSX
-if ls --help 2> /dev/null | grep -q -- --color; then
-    alias ls='ls --color=auto -b -CF'
-else
-    alias ls='ls -b -CF'
-fi
-
 alias l.='ls -d .*'
 alias ll='ls -l'
 alias la='ls -la'

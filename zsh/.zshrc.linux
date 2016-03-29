@@ -4,3 +4,6 @@ if [[ -x /usr/bin/systemctl ]]; then
     alias sc="$SUDO systemctl"
     alias jc="$SUDO journalctl"
 fi
+
+## Basic `ls` settings
+alias ls='ls --color=auto -b -CF'

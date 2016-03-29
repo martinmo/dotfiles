@@ -21,6 +21,9 @@ if [[ -d ~/android-sdk/platform-tools ]]; then
     path=(~/android-sdk/platform-tools $path)
 fi
 
+## Basic `ls` settings
+alias ls='ls -b -CF'
+
 ## Handy aliases
 alias o="open"
 alias htop="sudo htop"
