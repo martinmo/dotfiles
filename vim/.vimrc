@@ -16,9 +16,9 @@ endif
 
 " use YCM by default
 autocmd Filetype *
-  \	if &omnifunc == "" |
-  \		setlocal omnifunc=youcompleteme#Complete |
-  \	endif
+  \ if &omnifunc == "" |
+  \   setlocal omnifunc=youcompleteme#Complete |
+  \ endif
 
 " jump to last position in file
 autocmd BufReadPost *
