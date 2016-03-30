@@ -14,12 +14,17 @@ if has("gui") && has("mac")
   set visualbell
 endif
 
-if has("autocmd") && exists("+omnifunc")
-  autocmd Filetype *
-        \	if &omnifunc == "" |
-        \		setlocal omnifunc=youcompleteme#Complete |
-        \	endif
-endif
+" use YCM by default
+autocmd Filetype *
+  \	if &omnifunc == "" |
+  \		setlocal omnifunc=youcompleteme#Complete |
+  \	endif
+
+" jump to last position in file
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
 
 " essential settings
 set autoread
