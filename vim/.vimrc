@@ -121,8 +121,8 @@ nnoremap $ g$
 " quick escape
 inoremap jj <esc>
 
-" Command-T ignores
-set wildignore+=venvs/**,vendor/**,node_modules/**,htmlcov/**,.git/**,*.pyc,*.pyo
+" CtrlP ignores
+set wildignore+=venvs/**,vendor/**,node_modules/**,htmlcov/**,.git/**,*.pyc,*.pyo,*.swp
 
 iabbrev misc miscellaneous
 iabbrev unnec unnecessary
