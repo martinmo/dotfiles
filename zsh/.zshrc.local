@@ -51,7 +51,7 @@ alias php.server='php -S0.0.0.0:8080 index.php &>/dev/null </dev/null &'
 alias Groot='cd "$(git rev-parse --show-toplevel)"'
 
 export MANWIDTH=80
-export LESS="-X -F -R -x4"
+export LESS="-X -F -R -x4 -i"
 export EDITOR="vim"
 
 ## Configure interactive Python if available
