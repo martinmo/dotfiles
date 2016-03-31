@@ -41,7 +41,7 @@ set linebreak
 set modeline
 set mouse=a
 set number
-set scrolloff=5
+set scrolloff=10
 set showcmd
 set showmatch
 set showtabline=1
