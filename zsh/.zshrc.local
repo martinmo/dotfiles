@@ -58,9 +58,9 @@ export EDITOR="vim"
 [[ -r ~/.pythonstartup ]] && export PYTHONSTARTUP=~/.pythonstartup
 
 ## Add local binaries to PATH
-if [[ -d ~/bin ]]; then
-    path=(~/bin $path)
-fi
+for dir in ~/bin ~/.local/bin; do
+    [[ -d $dir ]] && path=($dir $path)
+done
 
 ## Generates random alphanumeric passwords with given length (default: 14)
 genpass() {
