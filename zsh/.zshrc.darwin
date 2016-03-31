@@ -9,17 +9,10 @@ export EDITOR="mvim -f --nomru"
 export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
 
-## JVM-related stuff
+## JVM-related stuff: adding JAVA_HOME/bin to PATH is not strictly
+## necessary on OS X, but will help finding the right man pages.
 export JAVA_HOME=$(/usr/libexec/java_home)
 path=($JAVA_HOME/bin $path)
-
-## Move /usr/local/bin to the beginning of the path (Homebrew)
-path=(/usr/local/bin /usr/local/sbin $path)
-
-## Android platform tools (adb and fastboot)
-if [[ -d ~/android-sdk/platform-tools ]]; then
-    path=(~/android-sdk/platform-tools $path)
-fi
 
 ## Basic `ls` settings
 alias ls='ls -b -CF'
