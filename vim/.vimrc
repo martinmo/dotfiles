@@ -97,6 +97,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:airline#extensions#tabline#enabled = 1
 
+" ctrlp.vim settings
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set wildignore+=*/venvs/*,*/vendor/*,*/node_modules/*,*/htmlcov/**,*.pyc,*.pyo,*.swp
+
 " enable powerline fonts (Hack includes them)
 let g:airline_powerline_fonts = 1
 
@@ -121,9 +126,6 @@ nnoremap $ g$
 
 " quick escape
 inoremap jj <esc>
-
-" CtrlP ignores
-set wildignore+=venvs/**,vendor/**,node_modules/**,htmlcov/**,.git/**,*.pyc,*.pyo,*.swp
 
 iabbrev misc miscellaneous
 iabbrev unnec unnecessary
