@@ -152,6 +152,9 @@ nnoremap ^ g^
 nnoremap 0 g0
 nnoremap $ g$
 
+" use space to fold/unfold
+nnoremap <space> za
+
 " quick escape
 inoremap jj <esc>
 
