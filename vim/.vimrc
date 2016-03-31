@@ -4,7 +4,7 @@ call pathogen#helptags()
 set bg=dark
 colorscheme smyck
 
-if has("gui") && has("mac")
+if has("gui_running") && has("mac")
   set guioptions=gm
   set guifont=Hack:h12
   set linespace=1
