@@ -88,6 +88,11 @@ au FileType text,python,ruby,vim,zsh,sh,html autocmd BufWritePre <buffer> :%s/\s
 ""
 let mapleader=","
 
+""
+"" YCM SETTINGS
+""
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_goto_buffer_command = 'new-tab'
 
 ""
 "" PYTHON SETTINGS
@@ -149,6 +154,9 @@ nnoremap $ g$
 
 " quick escape
 inoremap jj <esc>
+
+" jump to definition or declaration
+nnoremap <leader>g :YcmCompleter GoTo<cr>
 
 
 ""
