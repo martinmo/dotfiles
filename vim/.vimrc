@@ -83,6 +83,7 @@ au FileType text,python,ruby,vim,zsh,sh,html autocmd BufWritePre <buffer> :%s/\s
 
 " enable all highlighting available in python.vim
 let g:python_highlight_all = 1
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
 
 let mapleader=","
 
