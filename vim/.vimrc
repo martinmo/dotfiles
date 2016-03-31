@@ -99,6 +99,7 @@ let g:ycm_goto_buffer_command = 'new-tab'
 ""
 let g:python_highlight_all = 1
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 
 
 ""
@@ -142,6 +143,16 @@ let g:airline_symbols.linenr = '№'
 "" SIMPYLFOLD SETTINGS
 ""
 let g:SimpylFold_fold_docstring = 0
+
+
+""
+"" SYNTASTIC SETTINGS
+""
+" recommended settings from the readme:
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 
 ""
