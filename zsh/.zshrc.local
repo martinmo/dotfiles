@@ -67,6 +67,24 @@ genpass() {
     LC_ALL=C tr -cd '[:alnum:]' </dev/urandom | head -c "${1:-14}"; echo
 }
 
+## Edit files with `sudo -e`, preserving file ownership
+pedit () {
+    local file="$1"
+    if [[ -z "$file" || ! -e "$file" ]]; then
+        echo "error: no filename given or invalid file" >&2
+        return 42
+    fi
+
+    # try Linux version first, then Mac:
+    local oid="$(stat -c '%u' "$file" || stat -f '%u' "$file")" 2>/dev/null
+    if [[ $? != 0 || -z "$oid" ]]; then
+        echo "error: could not determine file ownership" >&2
+        return 43
+    fi
+
+    sudo -e -u "#$oid" "$file"
+}
+
 ## Load platform-specific configs
 xsource ~/.zshrc.$(uname -s | tr '[:upper:]' '[:lower:]')
 
