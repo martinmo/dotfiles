@@ -37,3 +37,6 @@
 [submodule "vim/.vim/bundle/ctrlp.vim"]
 	path = vim/.vim/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/.vim/bundle/SimpylFold"]
+	path = vim/.vim/bundle/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git

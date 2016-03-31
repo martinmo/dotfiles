@@ -139,6 +139,12 @@ let g:airline_symbols.linenr = '№'
 
 
 ""
+"" SIMPYLFOLD SETTINGS
+""
+let g:SimpylFold_fold_docstring = 0
+
+
+""
 "" CUSTOM KEYBOARD MAPPINGS
 ""
 " use tab to jump to matching brackets
