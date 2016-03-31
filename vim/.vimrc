@@ -104,8 +104,14 @@ let g:ycm_goto_buffer_command = 'new-tab'
 "" PYTHON SETTINGS
 ""
 let g:python_highlight_all = 1
-let g:ycm_python_binary_path = '/usr/local/bin/python3'
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+
+if exists("*exepath")
+  let s:py3 = exepath("python3")
+else
+  let s:py3 = "/usr/bin/python3"
+endif
+let g:ycm_python_binary_path = s:py3
+let g:syntastic_python_python_exec = s:py3
 
 
 ""
