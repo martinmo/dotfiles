@@ -14,10 +14,10 @@ if has("gui") && has("mac")
   set visualbell
 endif
 
-" use YCM by default
+" fallback omnifunc for ft plugins which don't set their own
 autocmd Filetype *
   \ if &omnifunc == "" |
-  \   setlocal omnifunc=youcompleteme#Complete |
+  \   setlocal omnifunc=syntaxcomplete#Complete |
   \ endif
 
 " jump to last position in file
