@@ -96,11 +96,6 @@ let g:python_highlight_all = 1
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 
 
-let NERDTreeShowHidden=1
-
-let g:rustfmt_autosave = 1
-
-
 ""
 "" ULTISNIPS SETTINGS
 ""
