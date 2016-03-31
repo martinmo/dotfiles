@@ -15,13 +15,13 @@ if has("gui_running") && has("mac")
 endif
 
 " fallback omnifunc for ft plugins which don't set their own
-autocmd Filetype *
+au Filetype *
   \ if &omnifunc == "" |
   \   setlocal omnifunc=syntaxcomplete#Complete |
   \ endif
 
 " jump to last position in file
-autocmd BufReadPost *
+au BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
@@ -75,12 +75,16 @@ set formatoptions=tcq
 ""
 "" FILETYPE SPECIFIC SETTINGS
 ""
-au FileType html,css,xml,tex,ruby,yaml,vim setl ts=2 sts=2 sw=2 et
-au FileType python setl colorcolumn=99 nowrap
-au FileType go setl ts=4 noet
+au FileType html,css,xml,tex,ruby,yaml,vim,markdown
+  \ setl ts=2 sts=2 sw=2 et
+au FileType python
+  \ setl colorcolumn=99 nowrap
+au FileType go
+  \ setl ts=4 noet
 
 " delete trailing whitespace during saving
-au FileType text,python,ruby,vim,zsh,sh,html autocmd BufWritePre <buffer> :%s/\s\+$//e
+au FileType text,python,ruby,vim,zsh,sh,html
+  \ au BufWritePre <buffer> :%s/\s\+$//e
 
 
 ""
@@ -88,11 +92,13 @@ au FileType text,python,ruby,vim,zsh,sh,html autocmd BufWritePre <buffer> :%s/\s
 ""
 let mapleader=","
 
+
 ""
 "" YCM SETTINGS
 ""
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_goto_buffer_command = 'new-tab'
+
 
 ""
 "" PYTHON SETTINGS
