@@ -133,7 +133,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 ""
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-set wildignore+=*/venvs/*,*/vendor/*,*/node_modules/*,*/htmlcov/**,*.pyc,*.pyo,*.swp
+set wildignore+=*/venvs/*,*/vendor/*,*/node_modules/*,*/htmlcov/*,*.pyc,*.pyo,*.swp
 
 
 ""
