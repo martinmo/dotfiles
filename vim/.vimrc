@@ -187,6 +187,9 @@ nnoremap <c-k> <c-w><c-k>
 nnoremap <c-l> <c-w><c-l>
 nnoremap <c-h> <c-w><c-h>
 
+" toggle hlsearch (adapted from the shadowed vim-sensible Ctrl-L mapping)
+nnoremap <leader>l :set hlsearch!<cr>
+
 " use space to fold/unfold
 nnoremap <space> za
 
