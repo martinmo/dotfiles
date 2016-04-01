@@ -68,8 +68,14 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
-" disable comment continuation
-set formatoptions=tcq
+" base formatoptions: auto-wrap text and comments
+set formatoptions=tc
+
+" allow formatting of comments with "gq"
+set formatoptions+=q
+
+" where it makes sense, remove a comment leader when joining lines
+set formatoptions+=j
 
 
 ""
