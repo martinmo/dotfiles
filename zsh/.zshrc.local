@@ -62,9 +62,16 @@ for dir in ~/bin ~/.local/bin; do
     [[ -d $dir ]] && path=($dir $path)
 done
 
-## Generates random alphanumeric passwords with given length (default: 14)
+## Generates random alphanumeric passwords
+##
+## Optional parameters:
+##  1) length (default: 14)
+##  2) extra characters to choose from (whitespace will be stripped)
+##
+## Example: genpass 14 '- + /'
 genpass() {
-    LC_ALL=C tr -cd '[:alnum:]' </dev/urandom | head -c "${1:-14}"; echo
+    local extra="${2//[[:space:]]/}"
+    LC_ALL=C tr -cd "[:alnum:]$extra" </dev/urandom | head -c "${1:-14}"; echo
 }
 
 ## Edit files with `sudo -e`, preserving file ownership
