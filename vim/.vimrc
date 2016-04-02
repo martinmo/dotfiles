@@ -47,7 +47,6 @@ set showmatch
 set showtabline=1
 set smartcase
 set wildmenu
-set wrap
 set cursorline
 set listchars=tab:▸\ ,eol:¬
 
@@ -67,6 +66,11 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+
+" wrap lines by default and visually indent wrapped lines by 4 shifts
+set wrap
+set breakindent
+set breakindentopt=shift:4
 
 " base formatoptions: auto-wrap text and comments
 set formatoptions=tc
