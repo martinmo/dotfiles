@@ -81,6 +81,8 @@ set formatoptions+=q
 " where it makes sense, remove a comment leader when joining lines
 set formatoptions+=j
 
+" don't fold by default
+set foldlevel=999
 
 ""
 "" FILETYPE SPECIFIC SETTINGS
