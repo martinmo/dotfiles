@@ -2,7 +2,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 set bg=dark
-colorscheme smyck
+colorscheme molokai
 
 if has("gui_running") && has("mac")
   set guioptions=gm
