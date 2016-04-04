@@ -5,7 +5,7 @@
 set -e
 
 bundles=vim/.vim/bundle
-plugins="ack.vim nerdcommenter vim-airline vim-fugitive vim-gitgutter"
+plugins="ack.vim molokai nerdcommenter vim-airline vim-fugitive vim-gitgutter"
 plugins="$plugins vim-polyglot vim-repeat vim-sensible vim-surround"
 
 for plugin in $plugins; do
