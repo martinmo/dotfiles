@@ -69,8 +69,10 @@ set tabstop=4
 
 " wrap lines by default and visually indent wrapped lines by 4 shifts
 set wrap
-set breakindent
-set breakindentopt=shift:4
+if v:version > 704 || v:version == 704 && has("patch354")
+  set breakindent
+  set breakindentopt=shift:4
+endif
 
 " base formatoptions: auto-wrap text and comments
 set formatoptions=tc
@@ -79,7 +81,9 @@ set formatoptions=tc
 set formatoptions+=q
 
 " where it makes sense, remove a comment leader when joining lines
-set formatoptions+=j
+if v:version > 703 || v:version == 703 && has("patch550")
+  set formatoptions+=j
+endif
 
 " don't fold by default
 set foldlevel=999
