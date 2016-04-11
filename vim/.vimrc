@@ -99,7 +99,7 @@ au FileType go
   \ setl ts=4 noet
 
 " delete trailing whitespace during saving
-au FileType text,python,ruby,vim,zsh,sh,html,jinja
+au FileType text,python,ruby,vim,zsh,sh,html,jinja,markdown
   \ au BufWritePre <buffer> :%s/\s\+$//e
 
 
