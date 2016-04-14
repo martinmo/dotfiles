@@ -5,7 +5,7 @@ setopt combiningchars
 ulimit -c 0
 
 ## OS X specific envvars
-export EDITOR="mvim -f --nomru"
+#export EDITOR="mvim -f --nomru"
 export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
 
