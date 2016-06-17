@@ -180,6 +180,8 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" ignore docstring warnings
+let g:syntastic_python_flake8_post_args='--ignore=D'
 
 ""
 "" CUSTOM KEYBOARD MAPPINGS
