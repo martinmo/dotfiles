@@ -117,7 +117,7 @@ set foldlevel=999
 ""
 "" FILETYPE SPECIFIC SETTINGS
 ""
-au FileType html,jinja,css,xml,tex,ruby,yaml,vim,markdown
+au FileType html,jinja,css,xml,javascript,tex,ruby,yaml,vim,markdown
   \ setl ts=2 sts=2 sw=2 et
 au FileType python
   \ setl nowrap
