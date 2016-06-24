@@ -74,6 +74,7 @@ set smartcase
 set wildmenu
 set cursorline
 set listchars=tab:▸\ ,eol:¬
+set colorcolumn=99
 
 " special settings for vim in diff mode
 if &diff
@@ -119,7 +120,7 @@ set foldlevel=999
 au FileType html,jinja,css,xml,tex,ruby,yaml,vim,markdown
   \ setl ts=2 sts=2 sw=2 et
 au FileType python
-  \ setl colorcolumn=99 nowrap
+  \ setl nowrap
 au FileType go
   \ setl ts=4 noet
 
