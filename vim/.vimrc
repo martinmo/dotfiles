@@ -1,5 +1,32 @@
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Vundle manages itself
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'SirVer/ultisnips'
+Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sensible'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-surround'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'scrooloose/syntastic'
+
+" Color schemes
+Plugin 'tomasr/molokai'
+
+call vundle#end()
 
 colorscheme molokai
 
