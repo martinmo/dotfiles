@@ -30,6 +30,7 @@ setopt promptsubst
 
 ## Unalias some grml stuff
 unalias l lh ls
+unfunction vim
 
 alias l.='ls -d .*'
 alias ll='ls -l'
