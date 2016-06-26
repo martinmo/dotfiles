@@ -118,7 +118,8 @@ set foldlevel=999
 ""
 "" FILETYPE SPECIFIC SETTINGS
 ""
-au FileType html,htmldjango,jinja,css,xml,javascript,tex,ruby,yaml,vim,markdown
+au FileType
+  \ css,html,htmldjango,javascript,jinja,less,markdown,ruby,tex,vim,xml,yaml
   \ setl ts=2 sts=2 sw=2 et
 au FileType python
   \ setl nowrap
@@ -126,7 +127,8 @@ au FileType go
   \ setl ts=4 noet
 
 " delete trailing whitespace during saving
-au FileType text,python,ruby,vim,zsh,sh,html,htmldjango,jinja,markdown
+au FileType
+  \ css,html,htmldjango,javascript,jinja,less,markdown,python,ruby,sh,tex,text,vim,xml,yaml,zsh
   \ au BufWritePre <buffer> :%s/\s\+$//e
 
 
