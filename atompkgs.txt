@@ -1,0 +1,12 @@
+atom-beautify@0.29.9
+autocomplete-python@1.8.1
+django-templates@0.5.0
+emmet@2.4.3
+git-time-machine@1.5.3
+hyperclick@0.0.36
+linter@1.11.14
+linter-flake8@1.13.2
+minimap@4.24.6
+minimap-hide@0.3.0
+vim-mode@0.65.1
+vim-surround@0.8.1

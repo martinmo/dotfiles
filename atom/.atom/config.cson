@@ -1,0 +1,49 @@
+"*":
+  autosave:
+    enabled: true
+  core:
+    disabledPackages: [
+      "timecop"
+      "exception-reporting"
+      "dev-live-reload"
+      "deprecation-cop"
+      "metrics"
+      "package-generator"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "vendor"
+    ]
+    packagesWithKeymapsDisabled: []
+    projectHome: "/Users/martin/Code"
+    themes: [
+      "atom-dark-ui"
+    ]
+  "django-templates":
+    defaultToDjangoTemplatesForFilePathsContaining: [
+      "templates"
+    ]
+  editor:
+    fontFamily: "Hack"
+    fontSize: 12
+    preferredLineLength: 99
+    softWrapHangingIndent: 2
+  "exception-reporting":
+    userId: "14510c09-a775-f595-7217-9372a65f9f62"
+  "linter-flake8":
+    executablePath: "$PROJECT/venvs/default/bin/flake8;$PROJECT/venv/bin/flake8;flake8"
+  minimap:
+    plugins:
+      "minimap-hide": true
+      "minimap-hideDecorationsZIndex": 0
+  "tree-view":
+    focusOnReveal: false
+    hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
+  welcome:
+    showOnStartup: false
