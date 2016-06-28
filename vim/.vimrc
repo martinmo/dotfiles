@@ -7,22 +7,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'SirVer/ultisnips'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sensible'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'scrooloose/syntastic'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -33,7 +23,7 @@ colorscheme molokai
 
 if has("gui_running") && has("mac")
   set guioptions=gm
-  set guifont=Hack:h11
+  set guifont=Hack:h12
   set linespace=4
 
   " turn off annoying beep
