@@ -28,9 +28,6 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 ## Use Homebrew'd curl
 [[ -x '/usr/local/opt/curl/bin/curl' ]] && alias curl='/usr/local/opt/curl/bin/curl'
 
-## Initialize docker & docker-machine
-[[ -r ~/.init_docker.zsh ]] && alias init-docker='source ~/.init_docker.zsh'
-
 ## Unload VirtualBox kexts, so we can start VMware Fusion safely
 vbox-unload() {
     for kext in org.virtualbox.kext.VBoxUSB org.virtualbox.kext.VBoxNetFlt \
