@@ -9,7 +9,6 @@
 	bra = branch -av
 	staged = diff --cached
 	ol = log --oneline --decorate
-	show-merge = !sh -c \"git diff $1^..$1\"
 [color]
 	ui = true
 [push]
