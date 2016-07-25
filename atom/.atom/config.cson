@@ -38,6 +38,8 @@
     fontSize: 12
     preferredLineLength: 99
     softWrapHangingIndent: 2
+  linter:
+    lintOnFly: false
   "linter-flake8":
     executablePath: "$PROJECT/venvs/default/bin/flake8;$PROJECT/venv/bin/flake8;/usr/bin/true"
   minimap:
