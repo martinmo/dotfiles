@@ -13,6 +13,7 @@
       "metrics"
       "package-generator"
     ]
+    excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
       ".hg"
@@ -20,7 +21,8 @@
       ".DS_Store"
       "._*"
       "Thumbs.db"
-      "vendor"
+      "*.pyc"
+      "__pycache__"
     ]
     packagesWithKeymapsDisabled: []
     projectHome: "/Users/martin/Code"
@@ -44,7 +46,7 @@
       "minimap-hideDecorationsZIndex": 0
   "tree-view":
     focusOnReveal: false
-    hideVcsIgnoredFiles: true
+    hideIgnoredNames: true
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
