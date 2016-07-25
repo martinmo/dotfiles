@@ -1,4 +1,7 @@
 "*":
+  "autocomplete-python":
+    pythonPaths: "$PROJECT/venvs/default/bin/python3;/usr/local/bin/python3"
+    useSnippets: "required"
   autosave:
     enabled: true
   core:
