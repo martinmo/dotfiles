@@ -1,6 +1,6 @@
 "*":
   "autocomplete-python":
-    pythonPaths: "$PROJECT/venvs/default/bin/python3;/usr/local/bin/python3"
+    pythonPaths: "$PROJECT/.state/venv/bin/python3;$PROJECT/venvs/default/bin/python3;/usr/local/bin/python3"
     useSnippets: "required"
   autosave:
     enabled: true
@@ -41,7 +41,7 @@
   linter:
     lintOnFly: false
   "linter-flake8":
-    executablePath: "$PROJECT/venvs/default/bin/flake8;$PROJECT/venv/bin/flake8;/usr/bin/true"
+    executablePath: "$PROJECT/.state/venv/bin/flake8;$PROJECT/venvs/default/bin/flake8;$PROJECT/venv/bin/flake8;/usr/bin/true"
   minimap:
     plugins:
       "minimap-hide": true
