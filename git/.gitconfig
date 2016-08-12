@@ -10,6 +10,8 @@
 	staged = diff --cached
 	ol = log --oneline --decorate
 	fixup = "!f() { TARGET=$(git rev-parse \"$1\"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
+	timetable = "!f() { git log --no-merges --format=\"%ad -- %s\" --date=short --author=morgenstern --since=$1-01 --until=$1-31; }; f"
+	sl = stash list --stat
 [color]
 	ui = true
 [push]
