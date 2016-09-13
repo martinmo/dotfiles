@@ -28,14 +28,16 @@
     projectHome: "/Users/martin/Code"
     themes: [
       "atom-dark-ui"
+      "one-dark-syntax"
     ]
   "django-templates":
     defaultToDjangoTemplatesForFilePathsContaining: [
       "templates"
     ]
   editor:
-    fontFamily: "Hack"
+    fontFamily: "Input Mono"
     fontSize: 12
+    lineHeight: 1.7
     preferredLineLength: 99
     softWrapHangingIndent: 2
   linter:
