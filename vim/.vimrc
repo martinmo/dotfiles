@@ -23,7 +23,7 @@ colorscheme molokai
 
 if has("gui_running") && has("mac")
   set guioptions=gm
-  set guifont=Hack:h12
+  set guifont=Input\ Mono:h12
   set linespace=4
 
   " turn off annoying beep
@@ -175,15 +175,8 @@ set fillchars+=stl:\ ,stlnc:\
 set showtabline=2
 let g:airline#extensions#tabline#enabled = 1
 
-" enable powerline fonts (Hack includes them)
+" enable powerline fonts
 let g:airline_powerline_fonts = 1
-
-" customize symbols for the Hack font
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_symbols.linenr = '№'
 
 
 ""
