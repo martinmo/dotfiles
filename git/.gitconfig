@@ -23,3 +23,9 @@
 	helper = osxkeychain
 [merge]
 	tool = opendiff
+[transfer]
+	fsckObjects = true
+[fetch]
+	fsckObjects = true
+[receive]
+	fsckObjects = true
