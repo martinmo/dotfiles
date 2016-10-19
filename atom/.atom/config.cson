@@ -12,6 +12,7 @@
       "deprecation-cop"
       "metrics"
       "package-generator"
+      "whitespace"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -26,6 +27,7 @@
     ]
     packagesWithKeymapsDisabled: []
     projectHome: "/Users/martin/Code"
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "one-dark-syntax"
