@@ -32,6 +32,10 @@ setopt promptsubst
 unalias l lh ls
 unfunction vim
 
+## Disable annoying zsh features
+MAILCHECK=0
+REPORTTIME=-1
+
 alias l.='ls -d .*'
 alias ll='ls -l'
 alias la='ls -la'
