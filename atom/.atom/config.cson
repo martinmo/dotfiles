@@ -28,10 +28,6 @@
     packagesWithKeymapsDisabled: []
     projectHome: "/Users/martin/Code"
     telemetryConsent: "no"
-    themes: [
-      "atom-dark-ui"
-      "one-dark-syntax"
-    ]
   "django-templates":
     defaultToDjangoTemplatesForFilePathsContaining: [
       "templates"
