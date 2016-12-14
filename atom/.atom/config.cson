@@ -1,10 +1,12 @@
 "*":
   "autocomplete-python":
     pythonPaths: "$PROJECT/.state/venv/bin/python3;$PROJECT/venvs/default/bin/python3;/usr/local/bin/python3"
+    useKite: false
     useSnippets: "required"
   autosave:
     enabled: true
   core:
+    automaticallyUpdate: false
     disabledPackages: [
       "timecop"
       "exception-reporting"
@@ -33,10 +35,12 @@
       "templates"
     ]
   editor:
+    atomicSoftTabs: false
     fontFamily: "Input Mono"
-    fontSize: 12
+    fontSize: 11
     lineHeight: 1.7
     preferredLineLength: 99
+    scrollPastEnd: true
     softWrapHangingIndent: 2
   linter:
     lintOnFly: false
