@@ -5,7 +5,6 @@ setopt combiningchars
 ulimit -c 0
 
 ## OS X specific envvars
-#export EDITOR="mvim -f --nomru"
 export LANG="en_US.UTF-8"
 
 ## JVM-related stuff: adding JAVA_HOME/bin to PATH is not strictly
@@ -25,8 +24,9 @@ unalias run-help &>/dev/null
 autoload run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 
-## Use Homebrew'd curl
-[[ -x '/usr/local/opt/curl/bin/curl' ]] && alias curl='/usr/local/opt/curl/bin/curl'
+## Use Homebrewed curl and openssl
+alias curl='/usr/local/opt/curl/bin/curl'
+alias openssl='/usr/local/opt/openssl@1.1/bin/openssl'
 
 ## Unload VirtualBox kexts, so we can start VMware Fusion safely
 vbox-unload() {
