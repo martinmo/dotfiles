@@ -41,4 +41,10 @@ sensitive information (i.e., `.ssh/config`). I have encrypted these files with
 
 ## Vim plugins
 
-If you want to use the Vim plugins, you need to initialize the git submodules first.
+The Vim plugins are managed with [Vundle](https://github.com/VundleVim/Vundle.vim),
+which is included as a submodule. To initialize, run:
+
+    git submodule update --init
+
+Then launch `vim` and run `:PluginInstall` once. After that, you should run
+`:PluginUpdate` from time to time.
