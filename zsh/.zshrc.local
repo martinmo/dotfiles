@@ -67,6 +67,13 @@ for dir in ~/bin ~/.local/bin; do
     [[ -d $dir ]] && path=($dir $path)
 done
 
+## pyenv setup
+if [[ -d ~/.pyenv ]]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    path=($PYENV_ROOT/bin $path)
+    eval "$(pyenv init -)"
+fi
+
 ## Generates random alphanumeric passwords
 ##
 ## Optional parameters:
