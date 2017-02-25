@@ -7,11 +7,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history # bottom
 ## virtualenv prompt info
 function venv_prompt_info() {
     if [[ -n "$VIRTUAL_ENV" ]]; then
-        if [[ -f "$VIRTUAL_ENV/__name__" ]]; then
-            local name=$(cat $VIRTUAL_ENV/__name__)
-        else
-            local name=$(basename $VIRTUAL_ENV)
-        fi
+        local name=$(python -c 'import sys; print("py" + "".join(str(x) for x in sys.version_info[:2]))')
         echo "%F{magenta}[%F{blue}$name%F{magenta}]%f "
     fi
 }
