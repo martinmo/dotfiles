@@ -67,6 +67,7 @@ set wildmenu
 set cursorline
 set listchars=tab:▸\ ,eol:¬
 set colorcolumn=99
+set textwidth=99
 
 " special settings for vim in diff mode
 if &diff
