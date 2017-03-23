@@ -12,6 +12,9 @@ export LANG="en_US.UTF-8"
 export JAVA_HOME="/Library/Java/Home"
 path=($JAVA_HOME/bin $path)
 
+## If JAVA_HOME is set to the path of a pre-9 JDK, /usr/bin/jshell will complain
+alias jshell='/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/bin/jshell'
+
 ## Basic `ls` settings
 alias ls='ls -b -CF'
 
