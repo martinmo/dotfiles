@@ -47,6 +47,9 @@ alias -g L='|less'
 alias http.server='python3 -m http.server 8080 &>/dev/null </dev/null &'
 alias php.server='php -S0.0.0.0:8080 index.php &>/dev/null </dev/null &'
 
+## Java stuff
+which javap >/dev/null && alias javap='javap -p -v -c'
+
 ## Change to the root of a git repo (groot is unusable because
 ## there are so many groo* binaries on my PATH)
 alias Groot='cd "$(git rev-parse --show-toplevel)"'
