@@ -43,7 +43,8 @@
     scrollPastEnd: true
     softWrapHangingIndent: 2
   linter:
-    lintOnFly: false
+    lintOnChange: false
+    lintPreviewTabs: false
   "linter-flake8":
     executablePath: "$PROJECT/.state/venv/bin/flake8;$PROJECT/venvs/default/bin/flake8;$PROJECT/venv/bin/flake8;/usr/bin/true"
   minimap:
