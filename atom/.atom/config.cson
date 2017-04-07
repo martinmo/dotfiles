@@ -1,6 +1,6 @@
 "*":
   "autocomplete-python":
-    pythonPaths: "$PROJECT/.state/venv/bin/python3;$PROJECT/venvs/default/bin/python3;/usr/local/bin/python3"
+    pythonPaths: "$PROJECT/.venvs/current/bin/python3;/usr/local/bin/python3"
     useKite: false
     useSnippets: "required"
   autosave:
