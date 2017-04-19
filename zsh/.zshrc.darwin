@@ -21,6 +21,7 @@ alias ls='ls -b -CF'
 ## Handy aliases
 alias o="open"
 alias htop="sudo htop"
+alias pbnull="pbcopy </dev/null"
 
 ## Homebrewed zsh setup
 unalias run-help &>/dev/null
