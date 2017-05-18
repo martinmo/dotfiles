@@ -43,6 +43,10 @@ alias -g '...'='../..'
 alias -g '....'='../../..'
 alias -g L='|less'
 
+## Shortcuts to temporarily disable SSH over a proxy
+alias directssh='ssh -o ProxyCommand=none'
+alias directscp='scp -o ProxyCommand=none'
+
 ## Shortcuts to start development servers
 alias http.server='python3 -m http.server 8080 &>/dev/null </dev/null &'
 alias php.server='php -S0.0.0.0:8080 index.php &>/dev/null </dev/null &'
