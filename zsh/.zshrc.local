@@ -59,7 +59,7 @@ command -v javap >/dev/null && alias javap='javap -p -v -c'
 alias Groot='cd "$(git rev-parse --show-toplevel)"'
 
 export MANWIDTH=80
-export LESS="-X -F -R -x4 -i"
+export LESS="-X -S -F -R -x4 -i"
 export EDITOR="vim"
 
 ## Configure interactive Python if available
