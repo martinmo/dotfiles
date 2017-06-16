@@ -32,13 +32,6 @@ To get an overview of the symlinks that get created, use:
     find ~ -maxdepth 1 -type l -ls
 
 
-## Sensitive files
-
-Though I am happy to share my dotfiles with you, some config files contain
-sensitive information (i.e., `.ssh/config`). I have encrypted these files with
-[git-crypt](https://github.com/AGWA/git-crypt).
-
-
 ## Vim plugins
 
 The Vim plugins are managed with [Vundle](https://github.com/VundleVim/Vundle.vim),
