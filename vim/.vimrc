@@ -120,7 +120,7 @@ au FileType go
 
 " delete trailing whitespace during saving
 au FileType
-  \ css,html,htmldjango,javascript,jinja,less,markdown,python,ruby,sh,tex,text,vim,xml,yaml,zsh
+  \ css,html,htmldjango,javascript,jinja,less,python,ruby,sh,tex,text,vim,xml,yaml,zsh
   \ au BufWritePre <buffer> :%s/\s\+$//e
 
 
