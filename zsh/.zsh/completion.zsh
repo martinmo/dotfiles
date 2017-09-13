@@ -18,7 +18,10 @@ zstyle ':completion:*' squeeze-slashes true
 # Ignore pwd when completing ../
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
-zstyle ':completion:*' format 'Completing %d'
+# Provide .. as a completion
+zstyle ':completion:*' special-dirs ..
+
+# Use the same colors as `ls`
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Initialize
