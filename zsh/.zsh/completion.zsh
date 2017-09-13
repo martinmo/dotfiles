@@ -24,5 +24,8 @@ zstyle ':completion:*' special-dirs ..
 # Use the same colors as `ls`
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+# More completion definitions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # Initialize
 autoload -Uz compinit && compinit

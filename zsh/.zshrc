@@ -39,6 +39,9 @@ MAILCHECK=0
 # Never report wall time for commands
 REPORTTIME=-1
 
+# More granular removal of words
+WORDCHARS=
+
 # Automatically remove duplicates from these arrays
 typeset -U path cdpath fpath manpath
 
