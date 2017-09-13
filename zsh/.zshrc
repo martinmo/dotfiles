@@ -53,6 +53,7 @@ source ~/.zsh/colors.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/keybindings.zsh
 source ~/.zsh/completion.zsh
+source ~/.zsh/termsupport.zsh
 
 # Add binaries in $HOME to the path
 for dir in ~/bin ~/.local/bin; do
