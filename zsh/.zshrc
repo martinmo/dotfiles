@@ -27,7 +27,6 @@ setopt pushdsilent
 
 # Globbing
 setopt extendedglob
-setopt globstarshort
 setopt nomatch
 
 # Enable multibyte support unconditionally
