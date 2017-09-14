@@ -19,12 +19,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
-# Directory stack
-setopt autopushd
-setopt pushdignoredups
-setopt pushdminus
-setopt pushdsilent
-
 # Globbing
 setopt extendedglob
 setopt nomatch
@@ -54,6 +48,7 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/keybindings.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/termsupport.zsh
+source ~/.zsh/dirstack.zsh
 source ~/.zsh/utils.zsh
 
 # Add binaries in $HOME to the path
