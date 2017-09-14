@@ -54,6 +54,7 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/keybindings.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/termsupport.zsh
+source ~/.zsh/utils.zsh
 
 # Add binaries in $HOME to the path
 for dir in ~/bin ~/.local/bin; do

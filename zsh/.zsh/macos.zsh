@@ -10,6 +10,22 @@ man-preview() {
 # ... and reuse man completion
 compdef _man man-preview
 
+# Eject external FileVault 2 disks correctly:
+#   - eject the virtual *and* surrounding physical disk
+#   - ask to force unmount the virtual disk if necessary
+eject32() {
+    local virtdisk=/dev/disk3
+    local physdisk=/dev/disk2
+    diskutil eject $virtdisk && diskutil eject $physdisk
+    if [[ $? != 0 ]]; then
+        # see zshbuiltins(1) for the funny read syntax
+        if read -q "?Force unmount $virtdisk? [y/n] "; then
+            echo
+            diskutil unmount force $virtdisk && diskutil eject $physdisk
+        fi
+    fi
+}
+
 # pyenv setup
 if [[ -d ~/.pyenv ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
