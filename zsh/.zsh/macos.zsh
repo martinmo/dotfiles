@@ -2,6 +2,9 @@
 export CLICOLOR=1
 export LSCOLORS=ExGxcxdxCxDxDxabagacad
 
+# Display ComputerName instead of DHCP-provided name in the prompt
+HOST="${$(scutil --get ComputerName)// /-}"
+
 # Use Preview.app to read manpages ...
 man-preview() {
     man -t "$@" | open -a Preview -f
