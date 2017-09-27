@@ -82,6 +82,10 @@ alias directscp='scp -o ProxyCommand=none'
 # Change to the root directory of a git clone
 alias Groot='cd "$(git rev-parse --show-toplevel)"'
 
+# zmv file renaming utility (e.g., `zmv *.bar foo/*.baz`)
+autoload -Uz zmv
+alias zmv='noglob zmv -W'
+
 # Load OS specific configurations
 [[ $OSTYPE == darwin* ]] && source ~/.zsh/macos.zsh
 [[ $OSTYPE == linux* ]]  && source ~/.zsh/linux.zsh
