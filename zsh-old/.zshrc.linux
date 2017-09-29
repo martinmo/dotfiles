@@ -1,9 +1,0 @@
-## systemctl is a nightmare to type *and* complete
-if command -v systemctl >/dev/null; then
-    # $SUDO will be set by grml zshrc
-    alias sc="$SUDO systemctl"
-    alias jc="$SUDO journalctl"
-fi
-
-## Basic `ls` settings
-alias ls='ls --color=auto -b -CF'
