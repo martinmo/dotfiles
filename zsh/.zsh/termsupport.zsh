@@ -17,12 +17,9 @@ function title {
   : ${2=$1}
 
   case "$TERM" in
-    cygwin|xterm*|putty*|rxvt*|ansi)
+    cygwin|xterm*|putty*|rxvt*|ansi|screen*)
       print -Pn "\e]2;$2:q\a" # set window name
       print -Pn "\e]1;$1:q\a" # set tab name
-      ;;
-    screen*)
-      print -Pn "\ek$1:q\e\\" # set screen hardstatus
       ;;
     *)
       if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
