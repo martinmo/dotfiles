@@ -12,6 +12,7 @@ setopt nohup
 setopt notify
 
 # History settings
+setopt extendedhistory
 setopt sharehistory
 setopt histignorealldups
 setopt histignorespace
