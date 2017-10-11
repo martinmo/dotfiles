@@ -13,8 +13,6 @@
 	sl = stash list --stat
 [color]
 	ui = true
-[push]
-	default = simple
 [core]
 	precomposeunicode = true
 	excludesfile = ~/.gitignore_global
