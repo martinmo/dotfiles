@@ -24,7 +24,8 @@ colorscheme molokai
 
 if has("gui_running") && has("mac")
   set guioptions=gm
-  set guifont=Input\ Mono:h11
+  set guifont=Fira\ Code:h11
+  set macligatures
   set linespace=4
 
   " turn off annoying beep
