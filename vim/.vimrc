@@ -13,7 +13,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'ctrlpvim/ctrlp.vim'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -128,14 +127,6 @@ au FileType
 "" GENERAL PLUGIN SETTINGS
 ""
 let mapleader=","
-
-
-""
-"" CTRLP SETTINGS
-""
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-set wildignore+=*/venvs/*,*/vendor/*,*/node_modules/*,*/htmlcov/*,*.pyc,*.pyo,*.swp,.DS_Store
 
 
 ""
