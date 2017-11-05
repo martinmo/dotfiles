@@ -86,8 +86,10 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
-" wrap lines by default and visually indent wrapped lines by 4 shifts
-set wrap
+" don't wrap lines by default
+set nowrap
+
+" visually indent wrapped lines by 4 shifts
 if v:version > 704 || v:version == 704 && has("patch354")
   set breakindent
   set breakindentopt=shift:4
@@ -113,8 +115,6 @@ set foldlevel=999
 au FileType
   \ css,html,htmldjango,javascript,jinja,less,markdown,ruby,tex,vim,xml,yaml
   \ setl ts=2 sts=2 sw=2 et
-au FileType python
-  \ setl nowrap
 au FileType go
   \ setl ts=4 noet
 
