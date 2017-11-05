@@ -131,35 +131,6 @@ let mapleader=","
 
 
 ""
-"" YCM SETTINGS
-""
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_goto_buffer_command = 'new-tab'
-
-
-""
-"" PYTHON SETTINGS
-""
-let g:python_highlight_all = 1
-
-if exists("*exepath")
-  let s:py3 = exepath("python3")
-else
-  let s:py3 = "/usr/bin/python3"
-endif
-let g:ycm_python_binary_path = s:py3
-let g:syntastic_python_python_exec = s:py3
-
-
-""
-"" ULTISNIPS SETTINGS
-""
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-
-""
 "" CTRLP SETTINGS
 ""
 let g:ctrlp_show_hidden = 1
@@ -180,24 +151,6 @@ let g:airline#extensions#tabline#enabled = 1
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
 
-
-""
-"" SIMPYLFOLD SETTINGS
-""
-let g:SimpylFold_fold_docstring = 0
-
-
-""
-"" SYNTASTIC SETTINGS
-""
-" recommended settings from the readme:
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" ignore docstring warnings
-let g:syntastic_python_flake8_post_args='--ignore=D'
 
 ""
 "" CUSTOM KEYBOARD MAPPINGS
@@ -227,9 +180,6 @@ nnoremap <space> za
 
 " quick escape
 inoremap jj <esc>
-
-" jump to definition or declaration
-nnoremap <leader>g :YcmCompleter GoTo<cr>
 
 
 ""
