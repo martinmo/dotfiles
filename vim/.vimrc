@@ -25,6 +25,7 @@ if has("gui_running") && has("mac")
   set guioptions=gm
   set guifont=Input\ Mono:h11
   set linespace=4
+  set guicursor+=a:blinkon0
 
   " turn off annoying beep
   set visualbell
