@@ -36,13 +36,6 @@ if [[ -d ~/.pyenv ]]; then
     eval "$(pyenv init -)"
 fi
 
-# JVM-related stuff: adding JAVA_HOME/bin to PATH is not strictly
-# necessary on OS X, but will help finding the right man pages.
-if [[ -d /Library/Java/Home ]]; then
-    export JAVA_HOME=/Library/Java/Home
-    path=($JAVA_HOME/bin $path)
-fi
-
 # Open files from the command line
 alias o='open'
 
