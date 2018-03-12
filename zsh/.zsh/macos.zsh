@@ -29,13 +29,6 @@ eject32() {
     fi
 }
 
-# pyenv setup
-if [[ -d ~/.pyenv ]]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    path=($PYENV_ROOT/bin $path)
-    eval "$(pyenv init -)"
-fi
-
 # Open files from the command line
 alias o='open'
 
