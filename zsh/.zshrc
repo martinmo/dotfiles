@@ -53,7 +53,7 @@ source ~/.zsh/dirstack.zsh
 source ~/.zsh/utils.zsh
 
 # Add binaries in $HOME to the path
-for dir in ~/bin ~/.local/bin; do
+for dir in ~/bin ~/.local/bin ~/Library/Python/3.6/bin; do
     [[ -d $dir ]] && path=($dir $path)
 done
 
