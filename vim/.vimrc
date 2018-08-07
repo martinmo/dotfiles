@@ -49,7 +49,6 @@ au BufReadPost *
 ""
 set autoread
 set complete+=i
-set gdefault
 set hidden
 set hlsearch
 set ignorecase
@@ -58,7 +57,7 @@ set linebreak
 set modeline
 set mouse=a
 set number
-set scrolloff=10
+set scrolloff=5
 set showcmd
 set showmatch
 set showtabline=1
