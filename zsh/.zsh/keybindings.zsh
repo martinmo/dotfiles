@@ -1,6 +1,19 @@
 # Use emacs keybindings
 bindkey -e
 
+# Make sure that the terminal is in application mode when zle is active, since
+# only then values from $terminfo are valid (from oh-my-zsh)
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+  function zle-line-init() {
+    echoti smkx
+  }
+  function zle-line-finish() {
+    echoti rmkx
+  }
+  zle -N zle-line-init
+  zle -N zle-line-finish
+fi
+
 # Convert ... to ../.. and so on during typing
 rationalise-dot() {
     if [[ $LBUFFER = *.. ]]; then
@@ -30,8 +43,8 @@ bindkey ' ' magic-space
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey '^[[A' up-line-or-beginning-search
-bindkey '^[[B' down-line-or-beginning-search
+bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 
 # Use Ctrl-Z as a shortcut for typing `fg` (from grml-zsh)
 function grml-zsh-fg() {
