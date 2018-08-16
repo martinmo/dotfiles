@@ -14,16 +14,22 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   zle -N zle-line-finish
 fi
 
-# Convert ... to ../.. and so on during typing
+# Convert ... to ../.. and so on during typing (from grml)
 rationalise-dot() {
-    if [[ $LBUFFER = *.. ]]; then
-        LBUFFER+=/..
-    else
-        LBUFFER+=.
-    fi
+  local MATCH
+  if [[ $LBUFFER =~ '(^|/| |      |'$'\n''|\||;|&)\.\.$' ]]; then
+    LBUFFER+=/
+    zle self-insert
+    zle self-insert
+  else
+    zle self-insert
+  fi
 }
 zle -N rationalise-dot
 bindkey '.' rationalise-dot
+
+# without this, typing a . aborts incremental history search (from grml)
+bindkey -M isearch '.' self-insert
 
 # Edit command line in editor with Ctrl-X Ctrl-E
 autoload -Uz edit-command-line && zle -N edit-command-line
