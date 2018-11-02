@@ -23,7 +23,7 @@ colorscheme molokai
 
 if has("gui_running") && has("mac")
   set guioptions=gm
-  set guifont=Input\ Mono:h12
+  set guifont=Fira\ Code:h13
   set linespace=4
   set guicursor+=a:blinkon0
 
