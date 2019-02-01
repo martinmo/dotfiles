@@ -1,3 +1,6 @@
+[miscellany]
+enable-auto-props = yes
+
 [helpers]
 diff-cmd = colordiff
 
