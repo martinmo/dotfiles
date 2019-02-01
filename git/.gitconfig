@@ -1,6 +1,6 @@
 [user]
 	name = Martin Morgenstern
-	email = mail@mmorgenstern.net
+	email = martin.morgenstern1@tu-dresden.de
 [alias]
 	st = status -sb
 	ci = commit
