@@ -13,15 +13,18 @@ Plugin 'tpope/vim-repeat'
 Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'junegunn/goyo.vim'
 
 " Color schemes
 Plugin 'tomasr/molokai'
+Plugin 'reedes/vim-colors-pencil'
 
 call vundle#end()
 
-colorscheme molokai
-
 if has("gui_running") && has("mac")
+  colorscheme pencil
+  set bg=light
   set guioptions=gm
   set guifont=Fira\ Code:h13
   set linespace=4
@@ -29,6 +32,9 @@ if has("gui_running") && has("mac")
 
   " turn off annoying beep
   set visualbell
+else
+  colorscheme molokai
+  set bg=dark
 endif
 
 " fallback omnifunc for ft plugins which don't set their own
@@ -53,19 +59,17 @@ set hidden
 set hlsearch
 set ignorecase
 set incsearch
-set linebreak
+set nolinebreak
 set modeline
 set mouse=a
 set number
 set scrolloff=5
 set showcmd
 set showmatch
-set showtabline=1
 set smartcase
 set wildmenu
-set cursorline
+set textwidth=0
 set listchars=tab:▸\ ,eol:¬
-set textwidth=99
 
 " special settings for vim in diff mode
 if &diff
@@ -87,11 +91,8 @@ set tabstop=4
 " don't wrap lines by default
 set nowrap
 
-" visually indent wrapped lines by 4 shifts
-if v:version > 704 || v:version == 704 && has("patch354")
-  set breakindent
-  set breakindentopt=shift:4
-endif
+" but if we do, display wrapped lines with indent
+set breakindent
 
 " base formatoptions: auto-wrap text and comments
 set formatoptions=tc
@@ -113,14 +114,16 @@ set foldlevel=999
 au FileType
   \ css,html,htmldjango,javascript,jinja,less,markdown,ruby,tex,vim,xml,yaml
   \ setl ts=2 sts=2 sw=2 et
-au FileType go
-  \ setl ts=4 noet
 
 " delete trailing whitespace during saving
 au FileType
   \ css,html,htmldjango,javascript,jinja,less,python,ruby,sh,tex,text,vim,xml,yaml,zsh
   \ au BufWritePre <buffer> :%s/\s\+$//e
 
+" auto-wrap lines in text-like files
+au FileType
+  \ markdown,tex,text
+  \ setl textwidth=99 wrap linebreak
 
 ""
 "" GENERAL PLUGIN SETTINGS
@@ -135,8 +138,8 @@ let mapleader=","
 set noshowmode
 set fillchars+=stl:\ ,stlnc:\
 
-set showtabline=2
 let g:airline#extensions#tabline#enabled = 1
+set showtabline=1
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
