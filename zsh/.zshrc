@@ -37,7 +37,7 @@ REPORTTIME=-1
 WORDCHARS=
 
 # Automatically remove duplicates from these arrays
-typeset -U path cdpath fpath manpath
+typeset -U path cdpath fpath manpath PATH CDPATH FPATH MANPATH
 
 # View the manpage for the currently typed command with Esc-h
 autoload -Uz run-help run-help-git run-help-openssl run-help-sudo
@@ -53,9 +53,11 @@ source ~/.zsh/dirstack.zsh
 source ~/.zsh/utils.zsh
 
 # Add binaries in $HOME to the path
-for dir in ~/bin ~/.local/bin ~/Library/Python/3.6/bin; do
-    [[ -d $dir ]] && path=($dir $path)
-done
+if [[ -o login ]]; then
+    for dir in ~/bin ~/.local/bin; do
+        [[ -d $dir ]] && path=($dir $path)
+    done
+fi
 
 # If not running as root set $SUDO to sudo
 (( EUID != 0 )) && SUDO='sudo' || SUDO=''
