@@ -78,10 +78,6 @@ alias ll='ls -l'
 alias la='ls -a'
 alias -g L='|less'
 
-# Shortcuts to temporarily disable SSH over a proxy
-alias directssh='ssh -o ProxyCommand=none'
-alias directscp='scp -o ProxyCommand=none'
-
 # Change to the root directory of a git clone
 alias Groot='cd "$(git rev-parse --show-toplevel)"'
 
