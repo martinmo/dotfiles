@@ -54,9 +54,7 @@ source ~/.zsh/utils.zsh
 
 # Add binaries in $HOME to the path
 if [[ -o login ]]; then
-    for dir in ~/bin ~/.local/bin; do
-        [[ -d $dir ]] && path=($dir $path)
-    done
+    path=(~/.local/bin $path)
 fi
 
 # If not running as root set $SUDO to sudo
