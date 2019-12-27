@@ -22,7 +22,7 @@ SAVEHIST=5000
 
 # Globbing
 setopt extendedglob
-setopt nomatch
+setopt nullglob
 
 # Enable multibyte support unconditionally
 setopt combiningchars
