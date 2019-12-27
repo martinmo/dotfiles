@@ -79,7 +79,7 @@ alias la='ls -a'
 alias -g L='|less'
 
 # Change to the root directory of a git clone
-alias Groot='cd "$(git rev-parse --show-toplevel)"'
+alias gg='cd "$(git rev-parse --show-toplevel)"'
 
 # zmv file renaming utility (e.g., `zmv *.bar foo/*.baz`)
 autoload -Uz zmv
