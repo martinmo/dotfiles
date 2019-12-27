@@ -14,28 +14,24 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'junegunn/goyo.vim'
 
 " Color schemes
 Plugin 'tomasr/molokai'
-Plugin 'reedes/vim-colors-pencil'
 
 call vundle#end()
 
 if has("gui_running") && has("mac")
-  colorscheme pencil
-  set bg=light
   set guioptions=gm
-  set guifont=Fira\ Code:h13
+  set guifont=Fira\ Code:h12
   set linespace=4
   set guicursor+=a:blinkon0
 
   " turn off annoying beep
   set visualbell
-else
-  colorscheme molokai
-  set bg=dark
 endif
+
+colorscheme molokai
+set bg=dark
 
 " fallback omnifunc for ft plugins which don't set their own
 au Filetype *
