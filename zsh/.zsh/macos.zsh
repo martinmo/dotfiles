@@ -37,6 +37,20 @@ fi
 # Open files from the command line
 alias o='open'
 
+# Check if we are connected to the internet
+alias up='ping -no 8.8.8.8'
+
+# Open FF
+alias ff='open -a Firefox'
+
+# Quickly open reference docs
+ngxdoc() {
+    open "https://nginx.org/r/${1:-server}"
+}
+pyref() {
+    open "https://docs.python.org/3/library/${1:-index}.html"
+}
+
 # Show/hide hidden files in the Finder
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'

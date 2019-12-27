@@ -76,6 +76,10 @@ alias ll='ls -l'
 alias la='ls -a'
 alias -g L='|less'
 
+# Get my IPv4/IPv6 address as seen by webservers
+alias ip4='curl -4 icanhazip.com'
+alias ip6='curl -6 icanhazip.com'
+
 # Change to the root directory of a git clone
 alias gg='cd "$(git rev-parse --show-toplevel)"'
 
