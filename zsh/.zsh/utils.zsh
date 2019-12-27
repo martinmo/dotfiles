@@ -27,3 +27,25 @@ random_chars() {
     local extra="${2//[[:space:]]/}"
     LC_ALL=C tr -cd "[:alnum:]$extra" </dev/urandom | head -c "${1:-14}"; echo
 }
+
+# Use the Maven wrapper if available, even when typing "mvn"
+if command -v mvn >/dev/null; then
+    function mvn() {
+        if [[ -x ./mvnw ]]; then
+            ./mvnw $@
+        else
+            command mvn $@
+        fi
+    }
+fi
+
+# Use the Gradle wrapper if available, even when typing "gradle"
+if command -v gradle >/dev/null; then
+    function gradle() {
+        if [[ -x ./gradlew ]]; then
+            ./gradlew $@
+        else
+            command gradle $@
+        fi
+    }
+fi

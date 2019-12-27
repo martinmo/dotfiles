@@ -54,3 +54,8 @@ pyref() {
 # Show/hide hidden files in the Finder
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+
+# Convenient JAVA_HOME configuration (example: `set-java-version 11`)
+set-java-version() {
+    export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
+}
