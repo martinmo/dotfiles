@@ -87,5 +87,8 @@ alias zmv='noglob zmv -W'
 [[ $OSTYPE == darwin* ]] && source ~/.zsh/macos.zsh
 [[ $OSTYPE == linux* ]]  && source ~/.zsh/linux.zsh
 
+# Load fzf (fuzzy finder) key bindings and autocompletion
+[[ -r ~/.fzf.zsh ]] && source ~/.fzf.zsh
+
 # Load local configuration
 [[ -r ~/.zshrc.local ]] && source ~/.zshrc.local
