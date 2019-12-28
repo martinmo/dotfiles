@@ -11,9 +11,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'vim-airline/vim-airline'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'editorconfig/editorconfig-vim'
 
 " Color schemes
 Plugin 'tomasr/molokai'
