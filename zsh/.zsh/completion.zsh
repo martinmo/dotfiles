@@ -27,6 +27,9 @@ zstyle ':completion:*' special-dirs ..
 # Use the same colors as `ls`
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+# Pick up new commands in $PATH immediately (i.e., automatically rehash)
+zstyle ':completion:*' rehash true
+
 # More completion definitions
 fpath=(~/.zfunc /usr/local/share/zsh-completions $fpath)
 
