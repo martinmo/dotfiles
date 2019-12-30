@@ -61,7 +61,7 @@ fi
 (( EUID != 0 )) && SUDO='sudo' || SUDO=''
 
 # Default environment
-export EDITOR='vim'
+export EDITOR=${EDITOR:-vim}
 export LANG='en_US.UTF-8'
 export LESS='-X -S -F -R -x4 -i'
 export MANWIDTH=80
