@@ -54,7 +54,7 @@ source ~/.zsh/utils.zsh
 
 # Add binaries in $HOME to the path
 if [[ -o login ]]; then
-    path=(~/.local/bin $path)
+    path=(~/.local/bin ~/.poetry/bin $path)
 fi
 
 # If not running as root set $SUDO to sudo
