@@ -51,6 +51,9 @@ pyref() {
     open "https://docs.python.org/3/library/${1:-index}.html"
 }
 
+# I prefer to use GNU sed instead of BSD sed
+alias sed=gsed
+
 # Show/hide hidden files in the Finder
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
