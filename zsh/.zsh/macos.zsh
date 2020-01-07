@@ -54,6 +54,9 @@ pyref() {
 # I prefer to use GNU sed instead of BSD sed
 alias sed=gsed
 
+# Always colorize ripgrep output (e.g., when piping to less)
+alias rg='rg --pretty'
+
 # Show/hide hidden files in the Finder
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
