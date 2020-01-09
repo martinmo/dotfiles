@@ -71,6 +71,7 @@ alias tree='tree -C'
 alias grep='grep --color=auto'
 
 # Default aliases
+alias l='ls'
 alias l.='ls -d .*'
 alias ll='ls -l'
 alias la='ls -a'
