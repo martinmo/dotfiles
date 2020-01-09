@@ -30,6 +30,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # Pick up new commands in $PATH immediately (i.e., automatically rehash)
 zstyle ':completion:*' rehash true
 
+# Only offer the following user names as completion
+zstyle ':completion:*' users $USER root
+
 # More completion definitions
 fpath=(~/.zfunc /usr/local/share/zsh-completions $fpath)
 
