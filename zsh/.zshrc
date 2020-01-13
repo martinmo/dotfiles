@@ -7,6 +7,7 @@ setopt correct
 setopt hashlistall
 setopt interactivecomments
 setopt longlistjobs
+setopt checkjobs
 setopt nobeep
 setopt nohup
 setopt notify
