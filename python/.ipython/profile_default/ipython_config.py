@@ -4,8 +4,10 @@ c = get_config()
 
 c.InteractiveShell.confirm_exit = False
 c.InteractiveShellApp.exec_lines = [
+    'from datetime import datetime, timedelta',
     'import itertools',
     'import math',
+    'import random',
     'import re',
     'import sys',
 ]
