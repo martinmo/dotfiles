@@ -75,7 +75,7 @@ alias grep='grep --color=auto'
 alias l='ls'
 alias l.='ls -d .*'
 alias ll='ls -l'
-alias la='ls -a'
+alias la='ls -A'
 alias -g L='|less'
 
 # Get my IPv4/IPv6 address as seen by webservers
