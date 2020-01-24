@@ -1,0 +1,8 @@
+set clipboard=unnamedplus
+set hlsearch
+set incsearch
+set scrolloff=15
+set showmode
+set surround
+
+inoremap jj <ESC>
