@@ -89,6 +89,9 @@ alias gg='cd "$(git rev-parse --show-toplevel)"'
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
+# Python's JSON pretty printer tool
+alias json-fmt='python3 -m json.tool'
+
 # Load OS specific configurations
 [[ $OSTYPE == darwin* ]] && source ~/.zsh/macos.zsh
 [[ $OSTYPE == linux* ]]  && source ~/.zsh/linux.zsh
