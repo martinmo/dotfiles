@@ -53,6 +53,9 @@ source ~/.zsh/termsupport.zsh
 source ~/.zsh/dirstack.zsh
 source ~/.zsh/utils.zsh
 
+# fzf fuzzy finder (only in interactive sessions)
+[[ $- == *i* ]] && source ~/.zsh/fuzzyfinder.zsh
+
 # Add binaries in $HOME to the path
 if [[ -o login ]]; then
     path=(~/.local/bin ~/.poetry/bin $path)
@@ -95,9 +98,6 @@ alias json-fmt='python3 -m json.tool'
 # Load OS specific configurations
 [[ $OSTYPE == darwin* ]] && source ~/.zsh/macos.zsh
 [[ $OSTYPE == linux* ]]  && source ~/.zsh/linux.zsh
-
-# Load fzf (fuzzy finder) key bindings and autocompletion
-[[ -r ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
 # Load local configuration
 [[ -r ~/.zshrc.local ]] && source ~/.zshrc.local
