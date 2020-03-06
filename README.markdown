@@ -3,7 +3,6 @@
 These are my config files I use on several Linux and Mac boxes, shared here for
 your and my convenience.
 
-Be warned: these dotfiles are very biased towards Vim, zsh and OS X.
 
 ## Usage
 
@@ -12,11 +11,11 @@ with [GNU Stow](https://www.gnu.org/software/stow/stow.html).
 
 It is recommended to clone this repo into a subdirectory of `$HOME`:
 
-    git clone https://github.com/martinmo/dotfiles.git ~/dotfiles
+    git clone https://github.com/martinmo/dotfiles.git ~/.dotfiles
 
 To symlink (speak: activate) a group (e.g., `vim`):
 
-    cd ~/dotfiles
+    cd ~/.dotfiles
     stow vim
 
 To deactivate this group, use the `-D` flag:
