@@ -95,6 +95,9 @@ alias zmv='noglob zmv -W'
 # Python's JSON pretty printer tool
 alias json-fmt='python3 -m json.tool'
 
+# Create a SOCKS5 proxy on localhost:9999 with an arbitrary remote host
+alias ssh-socks-proxy='ssh -n -N -D 127.0.0.1:9999'
+
 # Load OS specific configurations
 [[ $OSTYPE == darwin* ]] && source ~/.zsh/macos.zsh
 [[ $OSTYPE == linux* ]]  && source ~/.zsh/linux.zsh
