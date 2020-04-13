@@ -61,7 +61,7 @@ alias rg='rg --pretty'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 
-# Convenient JAVA_HOME configuration (example: `set-java-version 11`)
-set-java-version() {
+# Convenient JAVA_HOME configuration (example: `jdk 11`)
+jdk() {
     export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
 }
