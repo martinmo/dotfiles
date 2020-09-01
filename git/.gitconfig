@@ -9,6 +9,7 @@
 	sl = stash list --stat
 	rs = restore
 	sw = switch
+	force-push = push --force-with-lease
 [color]
 	ui = true
 [core]
