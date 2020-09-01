@@ -1,6 +1,6 @@
 set clipboard=unnamedplus
 set hlsearch
 set incsearch
-set scrolloff=15
+set scrolloff=3
 
 inoremap jj <ESC>

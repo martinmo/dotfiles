@@ -1,8 +1,9 @@
 set clipboard=unnamedplus
 set hlsearch
 set incsearch
-set scrolloff=15
+set scrolloff=3
 set showmode
 set surround
 
 inoremap jj <ESC>
+set clipboard+=ideaput
