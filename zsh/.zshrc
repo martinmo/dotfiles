@@ -17,9 +17,13 @@ setopt extendedhistory
 setopt sharehistory
 setopt histignorealldups
 setopt histignorespace
+setopt histnostore
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
+
+# Ignore venv source issued by VS Code
+HISTORY_IGNORE='source /*/.venv/bin/activate'
 
 # Globbing
 setopt extendedglob
