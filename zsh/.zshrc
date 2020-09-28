@@ -92,6 +92,9 @@ alias ip6='curl -6 icanhazip.com'
 # Change to the root directory of a git clone
 alias gg='cd "$(git rev-parse --show-toplevel)"'
 
+# Quick commit log summary
+alias gl='git ol -15'
+
 # zmv file renaming utility (e.g., `zmv *.bar foo/*.baz`)
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
