@@ -4,7 +4,7 @@
 	co = checkout
 	br = branch -vv
 	staged = diff --cached
-	ol = log --oneline
+	ol = log --format=onelineplus
 	fixup = "!f() { TARGET=$(git rev-parse \"$1\"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	sl = stash list --stat
 	rs = restore
@@ -42,5 +42,7 @@
 	colorMoved = default
 [pull]
 	rebase = false
+[pretty]
+    onelineplus = %C(yellow)%h%Creset%C(bold red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
 [include]
 	path = .gitconfig.local
