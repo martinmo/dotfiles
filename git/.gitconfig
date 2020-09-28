@@ -19,7 +19,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-    line-numbers = true
+	line-numbers = true
 [credential]
 	helper = osxkeychain
 [merge]
@@ -38,6 +38,8 @@
 	required = true
 [hub]
 	protocol = ssh
+[diff]
+	colorMoved = default
 [pull]
 	rebase = false
 [include]
