@@ -14,11 +14,8 @@ function git_prompt_info() {
     if [[ -n "$(git status --porcelain 2>/dev/null)" ]]; then
         dirty="%{$fg_bold[yellow]%}*"
     fi
-    echo " %{$fg_bold[blue]%}git:(%{$fg_bold[red]%}$ref$dirty%{$fg_bold[blue]%})%{$reset_color%}"
+    echo " (%{$fg_bold[red]%}$ref$dirty%{$reset_color%})"
 }
 
-# Arrow eye-catcher and red/green return status indicator
-local arrow="%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})❯%{$reset_color%}"
-
 # Configures a colorful prompt like '❯ dotfiles git:(master*) % '
-PROMPT='${arrow} %{$fg_bold[cyan]%}%1~%{$reset_color%}$(git_prompt_info) %# '
+PROMPT='%{$fg_bold[cyan]%}%~%{$reset_color%}$(git_prompt_info) %(?.⚡️.❗️) '
