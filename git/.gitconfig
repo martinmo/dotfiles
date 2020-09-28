@@ -44,5 +44,7 @@
 	rebase = false
 [pretty]
     onelineplus = %C(yellow)%h%Creset%C(bold red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[init]
+	defaultBranch = main
 [include]
 	path = .gitconfig.local
