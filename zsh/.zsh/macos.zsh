@@ -54,6 +54,9 @@ pyref() {
 # I prefer to use GNU sed instead of BSD sed
 alias sed=gsed
 
+# Also, `bat` can be used as a drop-in for `cat`
+alias cat=bat
+
 # Always colorize ripgrep output (e.g., when piping to less)
 alias rg='rg --pretty'
 
