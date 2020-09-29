@@ -50,15 +50,14 @@ if command -v gradle >/dev/null; then
     }
 fi
 
-# in-place file recode to utf-8
-utf8-convert() {
+# Safe in-place file recode from latin1 to utf-8
+latin2unicode() {
     local file=$1
-    local from=${2:-latin1}
     if [[ "$file" == "" ]]; then
-        echo "No file name given" >&2
+        echo "error: no file name given" >&2
         return 1
     fi
-    tmp="$(mktemp)"
-    iconv -f "$from" -t utf8 "$file" >"$tmp" && mv "$tmp" "$file"
+    local tmp="$(mktemp)"
+    iconv -f latin1 -t utf8 "$file" >"$tmp" && mv "$tmp" "$file"
     rm -f "$tmp"
 }
