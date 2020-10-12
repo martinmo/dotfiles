@@ -95,6 +95,9 @@ alias gg='cd "$(git rev-parse --show-toplevel)"'
 # Quick commit log summary
 alias gl='git ol -15'
 
+# Git force push with safety net
+alias gfp='git push --force-with-lease'
+
 # zmv file renaming utility (e.g., `zmv *.bar foo/*.baz`)
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
