@@ -61,3 +61,15 @@ latin2unicode() {
     iconv -f latin1 -t utf8 "$file" >"$tmp" && mv "$tmp" "$file"
     rm -f "$tmp"
 }
+
+# Repair broken PDFs by converting them to PostScript and back
+pdfrepair() {
+    local pdf="$1"
+    if [[ "$pdf" == "" ]]; then
+        echo "error: no file name given" >&2
+        return 1
+    fi
+    local tmp="$(mktemp)"
+    pdf2ps "$pdf" "$tmp" && cp -i "$pdf" "$pdf.bak" && ps2pdf "$tmp" "$pdf"
+    rm -f "$tmp"
+}
