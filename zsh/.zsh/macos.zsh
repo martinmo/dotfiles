@@ -66,5 +66,7 @@ alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false &
 
 # Convenient JAVA_HOME configuration (example: `jdk 11`)
 jdk() {
-    export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
+    local java_home
+    java_home="$(/usr/libexec/java_home -v $1)"
+    (( $? == 0 )) && export JAVA_HOME="$java_home"
 }
