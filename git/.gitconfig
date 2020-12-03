@@ -14,8 +14,9 @@
 	ui = true
 [core]
 	precomposeunicode = true
-	excludesfile = ~/.gitignore_global
+	excludesFile = ~/.gitignore_global
 	pager = delta
+	attributesFile = ~/.gitattributes_global
 [interactive]
 	diffFilter = delta --color-only
 [delta]
