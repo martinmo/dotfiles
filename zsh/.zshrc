@@ -27,7 +27,7 @@ HISTORY_IGNORE='source /*/.venv/bin/activate'
 
 # Globbing
 setopt extendedglob
-setopt nullglob
+setopt nonullglob
 
 # Enable multibyte support unconditionally
 setopt combiningchars
