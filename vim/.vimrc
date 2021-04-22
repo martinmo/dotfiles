@@ -116,7 +116,7 @@ au FileType
 
 " auto-wrap lines in text-like files
 au FileType
-  \ markdown,tex,text
+  \ markdown,tex,text,asciidoc
   \ setl textwidth=99 wrap linebreak
 
 ""
