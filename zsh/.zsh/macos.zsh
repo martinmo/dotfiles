@@ -31,7 +31,8 @@ eject32() {
 
 # pyenv setup
 if [[ -d ~/.pyenv ]]; then
-    eval "$(pyenv init -)"
+    path=(~/.pyenv/bin $path)
+    eval "$(pyenv init --path)"
 fi
 
 # Open files from the command line
