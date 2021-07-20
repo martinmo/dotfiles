@@ -34,7 +34,7 @@ zstyle ':completion:*' rehash true
 zstyle ':completion:*' users $USER root
 
 # More completion definitions
-fpath=(~/.zsh/completions /usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completions $HOMEBREW_PREFIX/share/zsh/site-functions $HOMEBREW_PREFIX/share/zsh-completions $fpath)
 
 # Initialize
 autoload -Uz compinit && compinit
