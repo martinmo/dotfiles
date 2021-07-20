@@ -44,7 +44,7 @@
 [pull]
 	rebase = false
 [pretty]
-    onelineplus = %C(yellow)%h%Creset%C(bold red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset
+	onelineplus = %C(yellow)%h%Creset%C(bold red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset
 [init]
 	defaultBranch = main
 [include]
