@@ -85,6 +85,9 @@ alias ll='ls -l'
 alias la='ls -A'
 alias -g L='|less'
 
+# Show hidden and ignored files when searching with fd
+alias fd='fd --hidden --no-ignore'
+
 # Get my IPv4/IPv6 address as seen by webservers
 alias ip4='curl -4 icanhazip.com'
 alias ip6='curl -6 icanhazip.com'
