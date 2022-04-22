@@ -25,6 +25,7 @@
 	helper = osxkeychain
 [merge]
 	tool = opendiff
+	conflictStyle = zdiff3
 [transfer]
 	fsckObjects = true
 [fetch]
