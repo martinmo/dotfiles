@@ -9,15 +9,14 @@
 	sl = stash list --stat
 	rs = restore
 	sw = switch
-	force-push = push --force-with-lease
 [color]
 	ui = true
 [core]
 	precomposeUnicode = true
 	quotePath = false
 	excludesFile = ~/.gitignore_global
-	pager = delta
 	attributesFile = ~/.gitattributes_global
+	pager = delta
 [interactive]
 	diffFilter = delta --color-only
 [delta]
