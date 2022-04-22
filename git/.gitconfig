@@ -26,6 +26,9 @@
 [merge]
 	tool = opendiff
 	conflictStyle = zdiff3
+[mergetool]
+	hideResolved = true
+	keepBackup = false
 [transfer]
 	fsckObjects = true
 [fetch]
