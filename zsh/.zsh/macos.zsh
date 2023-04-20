@@ -71,4 +71,5 @@ jdk() {
     local java_home
     java_home="$(/usr/libexec/java_home -v $1)"
     (( $? == 0 )) && export JAVA_HOME="$java_home"
+    MANPATH=$JAVA_HOME/man:$MANPATH
 }
