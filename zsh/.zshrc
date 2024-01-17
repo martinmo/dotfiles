@@ -60,10 +60,13 @@ source ~/.zsh/utils.zsh
 # fzf fuzzy finder (only in interactive sessions)
 [[ $- == *i* ]] && source ~/.zsh/fuzzyfinder.zsh
 
-# Add binaries in $HOME to the path
-if [[ -o login ]]; then
-    path=(~/.local/bin ~/.poetry/bin $path)
-fi
+# Add binaries from pipx, go and cargo to PATH if available
+_add_to_path_if_exists() {
+    [[ -d $1 ]] && path=($1 $path)
+}
+_add_to_path_if_exists ~/go/bin
+_add_to_path_if_exists ~/.cargo/bin
+_add_to_path_if_exists ~/.local/bin
 
 # If not running as root set $SUDO to sudo
 (( EUID != 0 )) && SUDO='sudo' || SUDO=''
