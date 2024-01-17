@@ -65,7 +65,3 @@ function grml-zsh-fg() {
 }
 zle -N grml-zsh-fg
 bindkey '^Z' grml-zsh-fg
-
-# Use Option+Arrows to move between words
-bindkey '[C' forward-word
-bindkey '[D' backward-word
