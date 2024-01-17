@@ -55,13 +55,6 @@ pyref() {
 # I prefer to use GNU sed instead of BSD sed
 alias sed=gsed
 
-# Also, `bat` can be used as a drop-in for `cat`
-alias cat='bat --plain'
-
-# Always colorize ripgrep output (e.g., when piping to less)
-# and search hidden files.
-alias rg='rg --pretty --hidden'
-
 # Show/hide hidden files in the Finder
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
