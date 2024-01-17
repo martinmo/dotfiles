@@ -71,9 +71,14 @@ if &diff
   set nonumber
 endif
 
-" on OS X, integrate with the clipboard
-if has("mac")
-  set clipboard=unnamed
+if has("clipboard")
+  if has("mac")
+    " on OS X, integrate with the clipboard
+    set clipboard=unnamed
+  elseif has("unix")
+    " for vim-gtk3 on Ubuntu
+    set clipboard=unnamedplus
+  endif
 endif
 
 " use 4 spaces instead of tabstops by default
