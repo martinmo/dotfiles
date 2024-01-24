@@ -18,14 +18,21 @@ Plugin 'tomasr/molokai'
 
 call vundle#end()
 
-if has("gui_running") && has("mac")
-  set guioptions=gm
-  set guifont=Fira\ Code:h12
-  set linespace=4
-  set guicursor+=a:blinkon0
+if has("gui_running")
+  set guioptions=gm           " hide menubar
+  set guicursor+=a:blinkon0   " disable blinking cursor
+  set visualbell              " disable annoying beep
 
-  " turn off annoying beep
-  set visualbell
+  if has("mac")
+    set guifont=Fira\ Code:h12
+    set linespace=4
+  else
+    set guifont=Fira\ Code\ 10
+    set linespace=1
+  endif
+endif
+
+if has("gui_running") && has("unix")
 endif
 
 colorscheme molokai
