@@ -13,6 +13,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'vim-airline/vim-airline'
 Plugin 'sheerun/vim-polyglot'
 
+"lll
+
 " Color schemes
 Plugin 'tomasr/molokai'
 
@@ -25,10 +27,8 @@ if has("gui_running")
 
   if has("mac")
     set guifont=Fira\ Code:h12
-    set linespace=4
   else
     set guifont=Fira\ Code\ 10
-    set linespace=1
   endif
 endif
 
