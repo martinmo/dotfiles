@@ -45,6 +45,7 @@
 	conflictstyle = zdiff3
 [commit]
 	verbose = true
+	cleanup = scissors
 [branch]
 	sort = -committerdate
 [status]
