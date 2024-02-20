@@ -5,7 +5,6 @@
 	br = branch -vv
 	staged = diff --cached
 	ol = log --format=onelineplus
-	fixup = "!f() { TARGET=$(git rev-parse \"$1\"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	sl = stash list --stat
 	rs = restore
 	sw = switch

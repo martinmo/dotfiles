@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+
+TARGET=$(git rev-parse "$1")
+git commit --fixup=$TARGET ${@:2}
+GIT_EDITOR=true git rebase -i --autostash --autosquash $TARGET^
