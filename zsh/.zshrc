@@ -73,7 +73,6 @@ _add_to_path_if_exists ~/.local/bin
 
 # Default environment
 export EDITOR=${EDITOR:-vim}
-export LANG='en_US.UTF-8'
 export LESS='-X -S -F -R -x4 -i'
 export MANWIDTH=80
 

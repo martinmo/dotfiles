@@ -2,6 +2,9 @@
 export CLICOLOR=1
 export LSCOLORS=ExGxcxdxCxDxDxabagacad
 
+# Always use an english locale
+export LANG=en_US.UTF-8
+
 # Display ComputerName instead of DHCP-provided name in the prompt
 HOST="${$(scutil --get ComputerName)// /-}"
 
