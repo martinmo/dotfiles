@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# Based on an alias presented in Filippo Valsordas blog
+# (https://words.filippo.io/git-fixup-amending-an-older-commit/).
+#
+# Moved into a separate script because the alias approach doesn't
+# work if /bin/sh is dash (default in Ubuntu and Debian).
+
 set -e
 
 TARGET=$(git rev-parse "$1")
