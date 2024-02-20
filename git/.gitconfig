@@ -6,9 +6,6 @@
 	staged = diff --cached
 	ol = log --format=onelineplus
 	sl = stash list --stat
-	rs = restore
-	sw = switch
-	sdiff = diff --submodule
 [color]
 	ui = true
 [core]
