@@ -12,7 +12,6 @@
 [color]
 	ui = true
 [core]
-	precomposeUnicode = true
 	quotePath = false
 	excludesFile = ~/.gitignore_global
 	attributesFile = ~/.gitattributes_global
@@ -21,13 +20,6 @@
 	diffFilter = delta --color-only
 [delta]
 	line-numbers = true
-[credential]
-	helper = osxkeychain
-[merge]
-	tool = opendiff
-[mergetool]
-	hideResolved = true
-	keepBackup = false
 [transfer]
 	fsckObjects = true
 [fetch]
@@ -51,4 +43,4 @@
 [init]
 	defaultBranch = main
 [include]
-	path = .gitconfig.local
+	path = ~/.local/.gitconfig
