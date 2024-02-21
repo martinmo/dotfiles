@@ -13,8 +13,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'vim-airline/vim-airline'
 Plugin 'sheerun/vim-polyglot'
 
-"lll
-
 " Color schemes
 Plugin 'tomasr/molokai'
 
@@ -30,9 +28,6 @@ if has("gui_running")
   else
     set guifont=Fira\ Code\ 10
   endif
-endif
-
-if has("gui_running") && has("unix")
 endif
 
 colorscheme molokai
