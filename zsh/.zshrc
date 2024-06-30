@@ -51,7 +51,6 @@ source ~/.zsh/keybindings.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/termsupport.zsh
 source ~/.zsh/dirstack.zsh
-source ~/.zsh/utils.zsh
 source ~/.zsh/fuzzyfinder.zsh
 
 # Add binaries from pipx, go and cargo to PATH if available
@@ -61,6 +60,7 @@ _add_to_path_if_exists() {
 _add_to_path_if_exists ~/go/bin
 _add_to_path_if_exists ~/.cargo/bin
 _add_to_path_if_exists ~/.local/bin
+unfunction _add_to_path_if_exists
 
 # Default environment
 export EDITOR=${EDITOR:-vim}
