@@ -10,7 +10,7 @@ HOST="${$(scutil --get ComputerName)// /-}"
 
 # Use Preview.app to read manpages ...
 man-preview() {
-    man -t "$@" | open -a Preview -f
+    command man -t "$@" | open -a Preview -f
 }
 
 # ... and reuse man completion

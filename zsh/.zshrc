@@ -43,7 +43,6 @@ typeset -U path cdpath fpath manpath PATH CDPATH FPATH MANPATH
 
 # View the manpage for the currently typed command with Esc-h
 autoload -Uz run-help run-help-git run-help-openssl run-help-sudo
-unalias run-help &>/dev/null
 
 # Load "outsourced" configuration files
 source ~/.zsh/colors.zsh
@@ -65,8 +64,6 @@ _add_to_path_if_exists ~/.local/bin
 
 # Default environment
 export EDITOR=${EDITOR:-vim}
-export LESS='-X -S -F -R -x4 -i'
-export MANWIDTH=80
 
 # Enable colored output for tree and grep
 if (( $+commands[tree] )); then
