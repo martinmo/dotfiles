@@ -47,6 +47,13 @@ alias up='ping -no 8.8.8.8'
 # Open FF
 alias ff='open -a Firefox'
 
+# macOS variants of clipcopy/clippaste
+alias clipcopy='pbcopy'
+alias clippaste='pbpaste'
+
+# macOS variant of sudoedit
+alias sudoedit='sudo -e'
+
 # Quickly open reference docs
 ngxdoc() {
     open "https://nginx.org/r/${1:-server}"
@@ -56,7 +63,9 @@ pyref() {
 }
 
 # I prefer to use GNU sed instead of BSD sed
-alias sed=gsed
+if (( $+commands[gsed] )); then
+    alias sed=gsed
+fi
 
 # Show/hide hidden files in the Finder
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'

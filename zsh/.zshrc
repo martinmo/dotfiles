@@ -68,16 +68,15 @@ _add_to_path_if_exists ~/go/bin
 _add_to_path_if_exists ~/.cargo/bin
 _add_to_path_if_exists ~/.local/bin
 
-# If not running as root set $SUDO to sudo
-(( EUID != 0 )) && SUDO='sudo' || SUDO=''
-
 # Default environment
 export EDITOR=${EDITOR:-vim}
 export LESS='-X -S -F -R -x4 -i'
 export MANWIDTH=80
 
 # Enable colored output for tree and grep
-alias tree='tree -C'
+if (( $+commands[tree] )); then
+    alias tree='tree -C'
+fi
 alias grep='grep --color=auto'
 
 # Default aliases
@@ -85,10 +84,6 @@ alias l='ls'
 alias l.='ls -d .*'
 alias ll='ls -l'
 alias la='ls -A'
-alias -g L='|less'
-
-# Show hidden and ignored files when searching with fd
-alias fd='fd --hidden --no-ignore'
 
 # Get my IPv4/IPv6 address as seen by webservers
 alias ip4='curl -4 icanhazip.com'
@@ -106,12 +101,6 @@ alias gfp='git push --force-with-lease'
 # zmv file renaming utility (e.g., `zmv *.bar foo/*.baz`)
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
-
-# Python's JSON pretty printer tool
-alias json-fmt='python3 -m json.tool'
-
-# Create a SOCKS5 proxy on localhost:9999 with an arbitrary remote host
-alias ssh-socks-proxy='ssh -n -N -D 127.0.0.1:9999'
 
 # Load OS specific configurations
 [[ $OSTYPE == darwin* ]] && source ~/.zsh/macos.zsh
