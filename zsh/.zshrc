@@ -56,9 +56,7 @@ source ~/.zsh/completion.zsh
 source ~/.zsh/termsupport.zsh
 source ~/.zsh/dirstack.zsh
 source ~/.zsh/utils.zsh
-
-# fzf fuzzy finder (only in interactive sessions)
-[[ $- == *i* ]] && source ~/.zsh/fuzzyfinder.zsh
+source ~/.zsh/fuzzyfinder.zsh
 
 # Add binaries from pipx, go and cargo to PATH if available
 _add_to_path_if_exists() {
