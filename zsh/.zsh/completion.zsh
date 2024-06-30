@@ -35,7 +35,7 @@ zstyle ':completion:*' users $USER root
 
 # More completion definitions
 if [[ -n "$HOMEBREW_PREFIX" ]]; then
-    fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $HOMEBREW_PREFIX/share/zsh-completions $fpath)
+    fpath=($HOMEBREW_PREFIX/share/{zsh/site-functions,zsh-completions} $fpath)
 fi
 
 fpath=(~/.zsh/completions $fpath)
