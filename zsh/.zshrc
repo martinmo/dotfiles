@@ -23,7 +23,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Globbing
-setopt extendedglob
+setopt noextendedglob
 setopt nonullglob
 
 # Enable multibyte support unconditionally
